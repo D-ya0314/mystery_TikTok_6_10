@@ -357,7 +357,7 @@ const puzzles = [
   {
     question:
       "<div class='l_img-box'><img src='img/TikTok_謎9.png' alt='謎9' class='m_img' width='500' height='500'></div> <input type='text' id='answer' class='m_answer' placeholder='答えを入力' /> <button class='m_btn' id='solveBtn' onclick=\"submitAnswer()\"> 回答 </button> <p id='result'class class='m_question_p'></p>",
-    answer: "A",
+    answer: ["A", "Ａ", "a", "ａ"],
   },
   {
     question:
