@@ -149,8 +149,7 @@ async function checkUnlock(userId, DWMId) {
 window.onload = initializeLiff;
 
 /*---------- アンケート ----------*/
-const FORM_URL =
-  "https://forms.gle/oBTJo1q61vsgHWQw5";
+const FORM_URL = "https://forms.gle/oBTJo1q61vsgHWQw5";
 const surveyBtn = document.getElementById("survey-btn");
 
 function openSurvey() {
@@ -358,7 +357,7 @@ const puzzles = [
   {
     question:
       "<div class='l_img-box'><img src='img/TikTok_謎9.png' alt='謎9' class='m_img' width='500' height='500'></div> <input type='text' id='answer' class='m_answer' placeholder='答えを入力' /> <button class='m_btn' id='solveBtn' onclick=\"submitAnswer()\"> 回答 </button> <p id='result'class class='m_question_p'></p>",
-    answer: ["A", "Ａ"],
+    answer: "A",
   },
   {
     question:
