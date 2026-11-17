@@ -2,10 +2,20 @@
 
 /*---------- あなたのLIFF IDを入力 ----------*/
 const MY_LIFF_ID = "2011066044-5TOjxXbK";
+const isLocalPreview =
+  window.location.protocol === "file:" ||
+  ["localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
 let userId = sessionStorage.getItem("lineUserId");
 let DWMId = "DWM_TikTok6-10";
 /*---------- ページ読み込み時のメイン処理 ----------*/
 async function initializeLiff() {
+  if (isLocalPreview) {
+    userId = "local-preview";
+    document.getElementById("sectionCheck").classList.add("js_hidden");
+    document.getElementById("premiumContent").classList.remove("js_hidden");
+    return;
+  }
+
   try {
     // 1. LIFFの初期化
     await liff.init({ liffId: MY_LIFF_ID });
@@ -87,6 +97,8 @@ async function recordJoin(userId, puzzleId) {
 
 // クリア
 async function recordClear(userId, puzzleId) {
+  if (isLocalPreview) return;
+
   try {
     const response = await fetch(GAS_URL, {
       method: "POST",

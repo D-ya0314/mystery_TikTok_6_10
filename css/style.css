@@ -462,6 +462,12 @@ body {
   background-color: var(--primary-color);
 }
 
+.m_end-link {
+  display: inline-block;
+  margin: 8px;
+  text-decoration: none;
+}
+
 .m_p-w {
   color: var(--white-color);
 }
@@ -682,4 +688,39 @@ body {
 
 .js_hint_p {
   margin-top: 0;
+}
+
+/* Explanation page */
+.explanation-page {
+  padding: 32px 16px 64px;
+}
+
+.explanation-page h1 {
+  margin-bottom: 24px;
+}
+
+.explanation-item {
+  margin: 24px 0;
+  padding: 20px;
+  border: 1px solid var(--gray-color);
+  border-radius: 8px;
+  background: var(--white-color);
+}
+
+.explanation-item h2 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.explanation-item p {
+  margin-top: 8px;
+  line-height: 1.8;
+}
+
+.explanation-actions {
+  text-align: center;
+}
+
+.explanation-actions .m_btn {
+  margin: 8px;
 }
